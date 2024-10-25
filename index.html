@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lifestyle Theme</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <style>
+      /* Parallax Effect */
+      .parallax {
+        background-image: url('https://images.unsplash.com/photo-1507919909716-c8262e491cde?q=80&w=1932&auto=format&fit=crop');
+        min-height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+      .parallax h1 {
+        color: white;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+
+      /* Hover Effect */
+      .btn-primary:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+        transition: all 0.3s;
+      }
+
+      .img-hover img {
+        transition: all 0.3s;
+      }
+
+      .img-hover img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Smooth Scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Footer Style */
+      footer {
+        background-color: #343a40;
+        color: white;
+      }
+      footer a {
+        color: #f8f9fa;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><strong>Lifestyle Vibes</strong></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary" href="#" role="button">Subscribe</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Parallax Section -->
+    <div class="parallax" id="home">
+      <h1>Welcome to the Lifestyle Hub</h1>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+      <div class="row">
+        <div class="col-md-8">
+          <section>
+            <h2 class="mb-4">Explore Wellness, Fashion, and Trends</h2>
+
+            <!-- Cards Section -->
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="card img-hover">
+                  <img
+                    src="https://images.unsplash.com/photo-1716655399699-c32305ba375b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="card-img-top"
+                    alt="Healthy food"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Healthy Eating</h5>
+                    <p class="card-text">
+                      Discover delicious recipes and food trends that promote a
+                      healthy lifestyle.
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="card img-hover">
+                  <img
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600"
+                    class="card-img-top"
+                    alt="Fashion trends"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Fashion Trends</h5>
+                    <p class="card-text">
+                      Stay stylish with the latest fashion tips and sustainable
+                      fashion ideas.
+                    </p>
+                    <a href="#" class="btn btn-primary">Explore Fashion</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-4">
+          <section>
+            <h4>Trending Topics</h4>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item">Mindfulness Techniques</li>
+              <li class="list-group-item">Sustainable Fashion</li>
+              <li class="list-group-item">Fitness Tips</li>
+              <li class="list-group-item">Healthy Eating</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Subscription Section -->
+    <section class="bg-light py-5" id="subscribe">
+      <div class="container text-center">
+        <h2>Join Our Community</h2>
+        <p>Subscribe for the latest lifestyle updates</p>
+        <form class="row g-3 justify-content-center">
+          <div class="col-auto">
+            <input
+              type="text"
+              class="form-control"
+              id="firstname"
+              placeholder="First Name"
+            />
+          </div>
+          <div class="col-auto">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Email"
+            />
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">
+              Subscribe
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+      <div class="container">
+        <small
+          ><a href="#" class="text-white">Privacy Policy</a> •
+          <a href="#" class="text-white">Terms & Conditions</a></small
+        >
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
